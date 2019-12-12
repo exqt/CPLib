@@ -6,5 +6,7 @@ More coming soon!
 - Fenwick Tree
     - FenwickTree : Calculate/Update prefix sum in O(logN)
     - FenwickTree2D : 2D version of FenwickTree
+- Geometry
+    - getConvexHull : Find convex hull of a set of points in O(N)
 - Graph
     - BipartiteGraph : Find maximum matching, minimum vertex cover, maximum independent set on bipartite graph
