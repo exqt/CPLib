@@ -1,16 +1,13 @@
 language: cpp
 compiler: gcc
-dist: trusty
 
-before_install:
-  # C++17
-  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -qq
-
-install:
-  # C++17
-  - sudo apt-get install -qq g++-6
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
 
 script:
   - g++ test.cpp -DNDEBUG -O2 -std=c++17 -o test
