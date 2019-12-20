@@ -6,9 +6,9 @@ More coming soon!
 
 ## Contents
 - Fenwick Tree
-    - FenwickTree : Calculate/Update prefix sum in O(logN)
+    - FenwickTree : Calculate/Update prefix sum
     - FenwickTree2D : 2D version of FenwickTree
 - Geometry
-    - getConvexHull : Find convex hull of a set of points in O(NlogN)
+    - getConvexHull : Find convex hull of a set of points
 - Graph
-    - BipartiteGraph : Find maximum matching, minimum vertex cover, maximum independent set in O(|V||E|)
+    - BipartiteGraph : Find maximum matching, minimum vertex cover, maximum independent set
