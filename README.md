@@ -5,6 +5,7 @@
 More coming soon!
 
 ## Contents
+- Disjoint Set
 - Fenwick Tree
     - FenwickTree : Calculate/Update prefix sum
     - FenwickTree2D : 2D version of FenwickTree

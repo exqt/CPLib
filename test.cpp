@@ -1,11 +1,15 @@
 #include <iostream>
 
+#include "DisjointSet/disjointSetTest.hpp"
 #include "FenwickTree/fenwickTreeTest.hpp"
 #include "Geometry/typesTest.hpp"
 #include "Geometry/convexHullTest.hpp"
 #include "Math/modularIntTest.hpp"
 
 int main() {
+  std::cout << "Testing Disjoint Set.." << std::endl;
+  testDisjointSet();
+
   std::cout << "Testing Fenwick Tree.." << std::endl;
   testFenwickTree();
 
