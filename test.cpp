@@ -3,6 +3,7 @@
 #include "FenwickTree/fenwickTreeTest.hpp"
 #include "Geometry/typesTest.hpp"
 #include "Geometry/convexHullTest.hpp"
+#include "Math/modularIntTest.hpp"
 
 int main() {
   std::cout << "Testing Fenwick Tree.." << std::endl;
@@ -13,6 +14,9 @@ int main() {
 
   std::cout << "Testing Convex Hull.." << std::endl;
   testConvexHull();
+
+  std::cout << "Testing Modular Int.." << std::endl;
+  testModularInt();
 
   std::cout << "OK!" << std:: endl;
 }

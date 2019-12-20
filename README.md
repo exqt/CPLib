@@ -13,3 +13,6 @@ More coming soon!
 - Graph
     - BipartiteGraph : Find maximum matching, minimum vertex cover, maximum independent set
     - MCMFGraph : Find Min-cost Max-Flow
+- Math
+    - modularInt
+    - numberTheory
