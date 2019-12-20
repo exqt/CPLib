@@ -1,28 +1,27 @@
 #include <algorithm>
 #include <vector>
 
-#include "Geometry/types.hpp"
+#include "types.hpp"
 
 template<class T>
-std::vector<vec2<T>> getConvexHull(vector<vec2<T>> pts) {
-  vec2<T> center = *min_element(pts.begin(), pts.end(),
+std::vector<vec2<T>> getConvexHull(std::vector<vec2<T>> pts) {
+  vec2<T> center = *std::min_element(pts.begin(), pts.end(),
     [](vec2<T> &a, vec2<T> &b) {
       if(a.y != b.y) return a.y < b.y;
       else return a.x < b.x;
     }
   );
 
-  sort(pts.begin(), pts.end(),
+  std::sort(pts.begin(), pts.end(),
     [&center](vec2<T> a, vec2<T> b) {
-      a.x -= center.x; a.y -= center.y;
-      b.x -= center.x; b.y -= center.y;
+      a = a - center; b = b - center;
 
       if(b.x*a.y != a.x*b.y) return b.x*a.y < a.x*b.y;
       else return a.length() < b.length();
     }
   );
 
-  vector<vec2<T>> S;
+  std::vector<vec2<T>> S;
   S.push_back(pts[0]);
   S.push_back(pts[1]);
 
