@@ -7,6 +7,7 @@
 #include "Math/modularIntTest.hpp"
 #include "Math/polynomialTest.hpp"
 #include "SAT/twoSATTest.hpp"
+#include "SegmentTree/segmentTreeTest.hpp"
 
 int main() {
   std::cout << "Testing Disjoint Set.." << std::endl;
@@ -29,6 +30,9 @@ int main() {
 
   std::cout << "Testing SAT.." << std::endl;
   testTwoSAT();
+
+  std::cout << "Testing SegmentTree.." << std::endl;
+  testSegmentTree();
 
   std::cout << "OK!" << std:: endl;
 }
