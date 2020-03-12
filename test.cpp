@@ -5,6 +5,8 @@
 #include "Geometry/typesTest.hpp"
 #include "Geometry/convexHullTest.hpp"
 #include "Math/modularIntTest.hpp"
+#include "Math/polynomialTest.hpp"
+#include "SAT/twoSATTest.hpp"
 
 int main() {
   std::cout << "Testing Disjoint Set.." << std::endl;
@@ -21,6 +23,12 @@ int main() {
 
   std::cout << "Testing Modular Int.." << std::endl;
   testModularInt();
+
+  std::cout << "Testing Polynomial.." << std::endl;
+  testPolynomial();
+
+  std::cout << "Testing SAT.." << std::endl;
+  testTwoSAT();
 
   std::cout << "OK!" << std:: endl;
 }
