@@ -1,0 +1,51 @@
+{
+  "Parametric Search (min)": {
+    "scope": "cpp",
+    "prefix": "parametric_search_min",
+    "body": [
+      "int l = $1, r = $2;",
+      "int res = $2+1;",
+      "",
+      "auto possible = [&](int K) {",
+      "  $0",
+      "};",
+      "",
+      "while(l<=r) {",
+      "  int mid = (l+r)/2;",
+      "  if(possible(mid)) {",
+      "    r = mid-1;",
+      "    res = min(res, mid);",
+      "  } else l = mid+1;",
+      "}",
+      "",
+    ],
+  },
+  "Parametric Search (max)": {
+    "scope": "cpp",
+    "prefix": "parametric_search_max",
+    "body": [
+      "int l = $1, r = $2;",
+      "int res = $1-1;",
+      "",
+      "auto possible = [&](int K) {",
+      "  $0",
+      "};",
+      "",
+      "while(l<=r) {",
+      "  int mid = (l+r)/2;",
+      "  if(possible(mid)) {",
+      "    l = mid+1;",
+      "    res = max(res, mid);",
+      "  } else r = mid-1;",
+      "}",
+      "",
+    ],
+  },
+	"vector2d": {
+		"scope": "cpp",
+		"prefix": "vector2d",
+		"body": [
+			"vector<vector<$1>> $2($3, vector<$1>($4, $5));",
+		],
+	}
+}
