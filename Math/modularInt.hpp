@@ -12,8 +12,8 @@ struct modularInt {
   unsigned int n;
 
   modularInt() : n(0) {}
-  modularInt(int n) : n((n%MOD+MOD)%MOD) {}
-  modularInt(long long n) : n((n%MOD+MOD)%MOD) {}
+  modularInt(int n) : n((n+MOD)%MOD) {}
+  modularInt(long long n) : n((n+MOD)%MOD) {}
   modularInt(unsigned int n) : n(n%MOD) {}
   modularInt& operator=(const modularInt &m) { n = m.n; return *this; }
 
