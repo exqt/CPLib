@@ -14,6 +14,8 @@ void testModularInt() {
   C = A/B;
   assert(C*B == A);
 
+  assert(mint(-1) == MOD-1);
+
   A = 123456789, B = 987654321;
   assert(A*B == 123456789LL * 987654321LL % MOD);
 
