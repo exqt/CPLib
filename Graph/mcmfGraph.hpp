@@ -4,6 +4,8 @@
 #include <queue>
 
 class MCMFGraph {
+public:
+  static int INF;
   struct Edge {
     int u, v;
     int cap;
@@ -50,7 +52,6 @@ class MCMFGraph {
   }
 
 private:
-  static const int INF = 1e9;
   int n;
   std::vector<std::vector<Edge*>> adj;
   std::vector<int> dist;
@@ -88,3 +89,4 @@ private:
     return dist[sink] < INF;
   }
 };
+int MCMFGraph::INF = 1000000000;
