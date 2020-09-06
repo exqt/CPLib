@@ -17,7 +17,7 @@ std::vector<vec2<T>> getConvexHull(std::vector<vec2<T>> pts) {
       a = a - center; b = b - center;
 
       if(b.x*a.y != a.x*b.y) return b.x*a.y < a.x*b.y;
-      else return a.length() < b.length();
+      else return a.slength() < b.slength();
     }
   );
 

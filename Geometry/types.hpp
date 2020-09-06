@@ -28,7 +28,8 @@ struct vec3 {
   bool operator==(const vec3<T> o) const { return x == o.x && y == o.y && z == o.z; }
   T dot(const vec3<T> o) const { return x*o.x + y*o.y + z*o.z; }
   vec3<T> cross(const vec3<T> o) const { return vec3<T>(y*o.z - z*o.y, -(x*o.z - z*o.x), x*o.y - y*o.x); }
-  T length() { return x*x + y*y + z*z; } // squared
+  T length() { return x*x + y*y + z*z; }
+  T slength() { return sqrt(x*x + y*y + z*z;) }
 };
 #else
 #endif
