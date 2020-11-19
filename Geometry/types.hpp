@@ -10,7 +10,7 @@ struct vec2 {
   bool operator==(const vec2<T> o) const { return x == o.x && y == o.y; }
   T dot(const vec2<T> o) const { return x*o.x + y*o.y; }
   T cross(const vec2<T> o) const { return x*o.y - y*o.x; }
-  T length() { return sqrt(x*x + y*y); }
+  double length() { return sqrt(x*x + y*y); }
   T slength() { return x*x + y*y; }
   vec2<T> scale(T s) const { return vec2<T>(s*x, s*y); }
   vec2<T> rotate(double a) { return vec2<T>(x*cos(a)-y*sin(a), x*sin(a)+y*cos(a)); }
@@ -28,8 +28,8 @@ struct vec3 {
   bool operator==(const vec3<T> o) const { return x == o.x && y == o.y && z == o.z; }
   T dot(const vec3<T> o) const { return x*o.x + y*o.y + z*o.z; }
   vec3<T> cross(const vec3<T> o) const { return vec3<T>(y*o.z - z*o.y, -(x*o.z - z*o.x), x*o.y - y*o.x); }
-  T length() { return x*x + y*y + z*z; }
-  T slength() { return sqrt(x*x + y*y + z*z;) }
+  double length() { return sqrt(x*x + y*y + z*z); }
+  T slength() { return x*x + y*y + z*z; }
+  friend std::ostream& operator<<(std::ostream& os, const vec3<T> &v) { os << "(" << v.x << ", " << v.y << ", " << v.z << ")"; return os; }
 };
-#else
 #endif
