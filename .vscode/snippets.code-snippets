@@ -67,4 +67,17 @@
 			"}",
 		],
   },
+  "dfs_tree": {
+		"scope": "cpp",
+		"prefix": "dfs_tree",
+		"body": [
+      "function<void(int,int)> dfs = [&](int u, int p) {",
+      "  $0",
+      "  for(int v : adj[u]) {",
+      "    if(v == p) continue;",
+      "    dfs(v, u);",
+      "  }",
+      "};",
+		],
+  },
 }
